@@ -7,10 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
-        <Viewbox x:Name="kinectBodyViewbox">
-            <Image x:Name="Camera" Source="{Binding ImageSource}" Stretch="UniformToFill" />
-        </Viewbox>
-        <TextBlock x:Name="Word" Text="Probando" TextWrapping="Wrap" Margin="5 10 5 5" FontFamily="Segoe UI" FontSize="14"/>
+        <StackPanel Grid.Column="0" Grid.Row="0" Margin="5">
+            <Viewbox x:Name="kinectBodyViewbox">
+                <Image x:Name="Camera" Source="{Binding ImageSource}" Stretch="UniformToFill" />
+            </Viewbox>
+            <TextBlock x:Name="Word" Text="Probando" TextWrapping="Wrap" Margin="5 10 5 5" FontFamily="Segoe UI" FontSize="14"/>
+        </StackPanel>
     </Grid>
 </Window>
