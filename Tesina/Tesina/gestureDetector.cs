@@ -21,7 +21,7 @@ namespace Tesina
 
         private readonly string abrirProgress = "abrirProgress";
 
-        private bool abrirIniciad = false;
+        private bool abrirIniciado = false;
 
         private bool abrirFinal = false;
 
@@ -121,21 +121,28 @@ namespace Tesina
                                 {
                                     if (gesture.Name.Equals(abrir_inico))
                                     {
-                                        //this.word.Text = "inicio abrir";
-                                        abrirIniciad = result.Detected;
+                                        if(result.Detected)
+                                        {
+                                            abrirIniciado = result.Detected;
+                                        }
+                                        
                                     }
                                     else if (gesture.Name.Equals(abrir_final))
                                     {
-                                        //this.word.Text = "final abrir";
-                                        abrirFinal = result.Detected;
+                                        if (result.Detected)
+                                        {
+                                            abrirFinal = result.Detected;
+                                        }
                                     }
                                 }
                             }
 
                             if (continuousResults != null)
                             {
+                                
                                 if (gesture.Name.Equals(this.abrirProgress) && gesture.GestureType == GestureType.Continuous)
                                 {
+                                    
                                     ContinuousGestureResult result = null;
                                     continuousResults.TryGetValue(gesture, out result);
 
@@ -146,9 +153,13 @@ namespace Tesina
                                 }
                             }
                         }
-                        if (abrirIniciad && abrirFinal && abrirProgreso > 0.8f)
+                        if (abrirIniciado && abrirFinal && abrirProgreso > 0.8f)
                         {
                             this.word.Text = "DIJISTE ABRIR";
+                        }
+                        else
+                        {
+                            this.word.Text = "probando";
                         }
                     }
                 }
