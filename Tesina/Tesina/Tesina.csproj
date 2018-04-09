@@ -134,6 +134,9 @@
     <Content Include="Database\continuo.gbd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Database\completo.gbd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Database\Steering.gbd" />
     <None Include="Database\Tesina.gbd" />
     <None Include="Properties\Settings.settings">

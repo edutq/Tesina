@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tesina"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="600">
+        Title="MainWindow" Height="500" Width="700">
     <Grid>
         <StackPanel Grid.Column="0" Grid.Row="0" Margin="5">
             <Viewbox x:Name="kinectBodyViewbox">
                 <Image x:Name="Camera" Source="{Binding ImageSource}" Stretch="UniformToFill" />
             </Viewbox>
-            <TextBlock x:Name="Word" Text="Probando" TextWrapping="Wrap" Margin="5 10 5 5" FontFamily="Segoe UI" FontSize="14"/>
+            <TextBlock x:Name="Word" Text="Probando" TextWrapping="Wrap" Margin="5 10 5 5" FontFamily="Segoe UI" FontSize="26"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -69,6 +69,10 @@ namespace Tesina
                     {
                         if (bodyFrame != null)
                         {
+                            if (this.GD.IsPaused)
+                            {
+                                this.Word.Text = "NO HAY NADIE";
+                            }
                             if (bodyFrame != null)
                             {
                                 if (this.bodies == null)
@@ -99,7 +103,7 @@ namespace Tesina
                             if (dataReceived)
                             {
                                 Body activeBody = this.bodies[this.activeBodyIndex];
-
+  
                                 // visualize the new gesture data
                                 if (activeBody.TrackingId != this.GD.TrackingId)
                                 {
